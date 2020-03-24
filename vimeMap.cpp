@@ -27,7 +27,7 @@ void vimeMap::addWall(vimeWall w) {
 void vimeMap::removeWall(vimeWall w) {
 	for (int i = 0; i < walls.size(); i++) {
 		if (*walls[i] == w) {
-			walls.erase(std::find(walls.begin(), walls.end(), i));
+			walls.erase(walls.begin() + i);
 		}
 	}
 }
